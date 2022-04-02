@@ -18,13 +18,13 @@ import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 
 public class UserInterface extends JFrame implements ActionListener{
-//	Integer userList_1[] = {6666,7777,8888,9999};//æ›´æ”¹ä¸€ä¸‹ä¾¿äºå®éªŒ
-	JLabel username = new JLabel("ç”¨æˆ·å");//åæœŸéœ€è¦ä¿®æ”¹
+//	Integer userList_1[] = {6666,7777,8888,9999};//¸ü¸ÄÒ»ÏÂ±ãÓÚÊµÑé
+	JLabel username = new JLabel("ÓÃ»§Ãû");//ºóÆÚĞèÒªĞŞ¸Ä
 	JPanel north = new JPanel();
-	JButton startChat = new JButton("å¼€å§‹èŠå¤©");
-	JButton receive = new JButton("æ¥æ”¶èŠå¤©");
+	JButton startChat = new JButton("¿ªÊ¼ÁÄÌì");
+	JButton receive = new JButton("½ÓÊÕÁÄÌì");
 	JPanel south = new JPanel();
-	String states[] = {"åœ¨çº¿"};
+	String states[] = {"ÔÚÏß"};
 	JComboBox state = new JComboBox(states);
 	int port = 6666;
 	DatabaseLink databaseLink = DatabaseLink.getLink();
@@ -46,11 +46,11 @@ public class UserInterface extends JFrame implements ActionListener{
 	setDefaultCloseOperation(EXIT_ON_CLOSE);
 	usernameList.setSelectionMode(DefaultListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
 	
-	//æ•°æ®åº“åœ¨Swingä¸­çš„ä½“ç°
+	//Êı¾İ¿âÔÚSwingÖĞµÄÌåÏÖ
 	
 	setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("1.jpeg")));
 	north.setLayout(new FlowLayout(FlowLayout.CENTER));
-	username.setFont(new Font("å®‹ä½“",Font.BOLD,25));
+	username.setFont(new Font("ËÎÌå",Font.BOLD,25));
 	north.add(username);
 	north.add(state);
 	c.add(north,"North");
@@ -74,10 +74,10 @@ public class UserInterface extends JFrame implements ActionListener{
 		JButton jb =(JButton)e.getSource();
 		String getState = (String)state.getSelectedItem();
 		Boolean state1 = true;
-		if(getState.equals("åœ¨çº¿")) {
+		if(getState.equals("ÔÚÏß")) {
 			state1 = true;
 		}
-		else if(getState.equals("å¿™ç¢Œ")) {
+		else if(getState.equals("Ã¦Âµ")) {
 			state1 = false;
 		}
 		Object[] usernamesObject = usernameList.getSelectedValues();

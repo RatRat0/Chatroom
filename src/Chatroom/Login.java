@@ -20,17 +20,17 @@ import javax.swing.JTextField;
 
 
 public class Login extends JFrame implements ActionListener{
-	JButton login = new JButton("ç™»å½•");
-	JButton register = new JButton("æ³¨å†Œ");
-	JTextField account_num = new JTextField("QQå·",24);
-	JPasswordField password = new JPasswordField("å¯†ç ",24);
+	JButton login = new JButton("µÇÂ¼");
+	JButton register = new JButton("×¢²á");
+	JTextField account_num = new JTextField("QQºÅ",24);
+	JPasswordField password = new JPasswordField("ÃÜÂë",24);
 	JPanel south = new JPanel();
 	JPanel center = new JPanel();
 	
-	//æ„é€ å‡½æ•°
+	//¹¹Ôìº¯Êı
 	public Login() {
-		//è®¾ç½®æ¡†æ¶
-		super("èŠå¤©ç™»å½•ç•Œé¢");
+		//ÉèÖÃ¿ò¼Ü
+		super("ÁÄÌìµÇÂ¼½çÃæ");
 		setSize(350, 150);  
 		setLocationRelativeTo(null);
 		setResizable(false);
@@ -47,7 +47,7 @@ public class Login extends JFrame implements ActionListener{
 		center.add(password);
 		c.add(center,"Center");
 		
-		//å°è¯•è¿æ¥æ•°æ®åº“
+		//³¢ÊÔÁ¬½ÓÊı¾İ¿â
 
 		
 		
@@ -57,17 +57,17 @@ public class Login extends JFrame implements ActionListener{
 		setVisible(true);
 		while(true) {
 			if (account_num.hasFocus()) {
-				if(account_num.getText().equals("QQå·")) {
+				if(account_num.getText().equals("QQºÅ")) {
 					account_num.setText("");
 				}
 			}
 			else {
 				if(account_num.getText().equals("")) {
-					account_num.setText("QQå·");
+					account_num.setText("QQºÅ");
 				}
 			}
 			if (password.hasFocus()) {
-				if(password.getText().equals("å¯†ç ")) {//å®‰å…¨æ€§é—®é¢˜
+				if(password.getText().equals("ÃÜÂë")) {//°²È«ĞÔÎÊÌâ
 					password.setText("");
 					password.setEchoChar('*');
 				}
@@ -75,7 +75,7 @@ public class Login extends JFrame implements ActionListener{
 			else {
 				if(password.getText().equals("")) {
 					password.setEchoChar((char)0);
-					password.setText("å¯†ç ");
+					password.setText("ÃÜÂë");
 				}
 			}
 			
@@ -91,12 +91,12 @@ public class Login extends JFrame implements ActionListener{
 		DatabaseLink databaseLink = DatabaseLink.getLink();
 		String writePassword = password.getText();
 		String truePassword = databaseLink.SelectPassword(port);
-		if(writePassword.equals(truePassword)) {										//è¦å†å†™çš„
+		if(writePassword.equals(truePassword)) {										//ÒªÔÙĞ´µÄ
 			new UserInterface(port);
 			setVisible(false);
 		}
 		else {
-			JOptionPane.showMessageDialog(this, "å¯†ç é”™è¯¯");
+			JOptionPane.showMessageDialog(this, "ÃÜÂë´íÎó");
 		}
 		
 	}

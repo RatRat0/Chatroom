@@ -16,59 +16,59 @@ import javax.swing.*;
 /*
  * 
  * 
- * é—®é¢˜3ï¼šä¸èƒ½åšåˆ°ä¿å­˜èŠå¤©è®°å½•
- * è®¾ç½®ä¸¤ä¸ªbooleanæ¥åš
- * æ”¾ä¸€ä¸ªä¸œè¥¿ä¿å­˜ä¹‹å‰å‘çš„ä¸œè¥¿ï¼Œç„¶åä¸€è‚¡è„‘çš„å‘
+ * ÎÊÌâ3£º²»ÄÜ×öµ½±£´æÁÄÌì¼ÇÂ¼
+ * ÉèÖÃÁ½¸öbooleanÀ´×ö
+ * ·ÅÒ»¸ö¶«Î÷±£´æÖ®Ç°·¢µÄ¶«Î÷£¬È»ºóÒ»¹ÉÄÔµÄ·¢
  * 
- * é—®é¢˜4ï¼šæ–­å¼€è¿æ¥ä¸èƒ½ç«‹åˆ»ä¸­æ–­è¿æ¥
+ * ÎÊÌâ4£º¶Ï¿ªÁ¬½Ó²»ÄÜÁ¢¿ÌÖĞ¶ÏÁ¬½Ó
  * 
- * é—®é¢˜5ï¼šä¸çŸ¥é“å†…å®¹æ˜¯è°å‘é€çš„
- * å¯ä»¥åˆ›å»ºä¸€ä¸ªç”¨æˆ·çš„ç±»æ¥åš
+ * ÎÊÌâ5£º²»ÖªµÀÄÚÈİÊÇË­·¢ËÍµÄ
+ * ¿ÉÒÔ´´½¨Ò»¸öÓÃ»§µÄÀàÀ´×ö
  * 
- * é—®é¢˜6ï¼šä¸èƒ½ä¼ æ’­å›¾ç‰‡ç­‰æ–‡ä»¶
+ * ÎÊÌâ6£º²»ÄÜ´«²¥Í¼Æ¬µÈÎÄ¼ş
  * 
- * é—®é¢˜7ï¼šè¿˜æ˜¯åªèƒ½åœ¨ç”µè„‘å†…ä¼ é€’æ•°æ®
+ * ÎÊÌâ7£º»¹ÊÇÖ»ÄÜÔÚµçÄÔÄÚ´«µİÊı¾İ
  * 
  * 
  * 
- * éœ€æ±‚ï¼š
- * 			1ã€å»ºç«‹ä¸€ä¸ªè¡¨ï¼ˆç”±æœ¬åœ°æ•°æ®åº“åˆ›ç«‹ï¼‰ï¼Œæ§åˆ¶æ¯ä¸ªç”¨æˆ·çš„ç«¯å£å’Œä¿¡æ¯ï¼Œç±»ä¼¼äºæœåŠ¡å™¨ï¼Œå¯ä»¥é€šè¿‡è¿™ä¸ªæ¥é€‰æ‹©èŠå¤©çš„å¯¹è±¡
- * 					æ•°æ®åº“è¿˜æœ‰å¾ˆå¤§çš„æ–¹é¢å»è§£å†³(æœ‰ä¸ªä»£ç é—®é¢˜éœ€è¦è§£å†³)
- * 2ã€èƒ½ä¼ è¾“å›¾åƒã€ä¼ è§†é¢‘
+ * ĞèÇó£º
+ * 			1¡¢½¨Á¢Ò»¸ö±í£¨ÓÉ±¾µØÊı¾İ¿â´´Á¢£©£¬¿ØÖÆÃ¿¸öÓÃ»§µÄ¶Ë¿ÚºÍĞÅÏ¢£¬ÀàËÆÓÚ·şÎñÆ÷£¬¿ÉÒÔÍ¨¹ıÕâ¸öÀ´Ñ¡ÔñÁÄÌìµÄ¶ÔÏó
+ * 					Êı¾İ¿â»¹ÓĞºÜ´óµÄ·½ÃæÈ¥½â¾ö(ÓĞ¸ö´úÂëÎÊÌâĞèÒª½â¾ö)
+ * 2¡¢ÄÜ´«ÊäÍ¼Ïñ¡¢´«ÊÓÆµ
  * 		
- * 3ã€èƒ½æ˜¾ç¤ºç»ˆç«¯ä¿¡æ¯å’Œæ§åˆ¶ç»ˆç«¯ä¸ªæ•°ï¼Œ
- *						 4ã€æŠŠæ¨¡å—å†™æˆå‡½æ•°ï¼Œä¾¿äºè°ƒæ§
- * 									å®Œæˆ
- * 							5ã€æŸ¥ä¸€ä¸‹é‚£ä¸ªåœ°å€ä¿¡æ¯
- * 									å¹¿æ’­ç»„çš„æŸä¸€ä¸ªåœ°å€	a multicast address
- * 			6ã€è¯»è¡¨æ“ä½œå’Œè®¾ç½®æ“ä½œè¦ç»‘åœ¨ä¸€å—
- * 				ä¼¼ä¹å®Œæˆäº†ï¼Ÿï¼Ÿï¼Ÿï¼Ÿï¼Ÿ
- * 7ã€æŠŠéœ€è¦çš„åº“å‡½æ•°å’ŒåŒ…å†™æˆæ–‡æ¡£ï¼Œå‘ç»™åˆ«äººï¼ˆè¿™ä¸ªä¸€å®šè¦è®°ä½ï¼‰
+ * 3¡¢ÄÜÏÔÊ¾ÖÕ¶ËĞÅÏ¢ºÍ¿ØÖÆÖÕ¶Ë¸öÊı£¬
+ *						 4¡¢°ÑÄ£¿éĞ´³Éº¯Êı£¬±ãÓÚµ÷¿Ø
+ * 									Íê³É
+ * 							5¡¢²éÒ»ÏÂÄÇ¸öµØÖ·ĞÅÏ¢
+ * 									¹ã²¥×éµÄÄ³Ò»¸öµØÖ·	a multicast address
+ * 			6¡¢¶Á±í²Ù×÷ºÍÉèÖÃ²Ù×÷Òª°óÔÚÒ»¿é
+ * 				ËÆºõÍê³ÉÁË£¿£¿£¿£¿£¿
+ * 7¡¢°ÑĞèÒªµÄ¿âº¯ÊıºÍ°üĞ´³ÉÎÄµµ£¬·¢¸ø±ğÈË£¨Õâ¸öÒ»¶¨Òª¼Ç×¡£©
  * 
- * 8ã€èƒ½å¤Ÿè®¾ç½®è‡ªåŠ¨å‘é€æ¶ˆæ¯çš„åŠŸèƒ½
- * 		å¢åŠ ä¸ªå¿™ç¢Œç­‰ç­‰åŠŸèƒ½
- * 		è¿›é˜¶ï¼šèƒ½è®¾ç½®è‡ªåŠ¨å›å¤çš„æ˜¯å•¥
+ * 8¡¢ÄÜ¹»ÉèÖÃ×Ô¶¯·¢ËÍÏûÏ¢µÄ¹¦ÄÜ
+ * 		Ôö¼Ó¸öÃ¦ÂµµÈµÈ¹¦ÄÜ
+ * 		½ø½×£ºÄÜÉèÖÃ×Ô¶¯»Ø¸´µÄÊÇÉ¶
  * 
- * 		9ã€èƒ½è®¾ç½®å•ä¸€ã€å°ç»„ã€å…¨éƒ¨å¥½å‹çš„é€šè®¯æ¨¡å¼
- * 				é—®é¢˜1ï¼šè‡ªå·±çš„ä¿¡æ¯å†…å®¹è¦æ¥æ”¶ä¸¤æ¬¡
- * 				é—®é¢˜2ï¼šæ–¹å‘åè¿‡æ¥çš„ç°è±¡
- * 				é—®é¢˜3ï¼šä¿¡æ¯äº’ç›¸ä¸²çš„ç°è±¡
+ * 		9¡¢ÄÜÉèÖÃµ¥Ò»¡¢Ğ¡×é¡¢È«²¿ºÃÓÑµÄÍ¨Ñ¶Ä£Ê½
+ * 				ÎÊÌâ1£º×Ô¼ºµÄĞÅÏ¢ÄÚÈİÒª½ÓÊÕÁ½´Î
+ * 				ÎÊÌâ2£º·½Ïò·´¹ıÀ´µÄÏÖÏó
+ * 				ÎÊÌâ3£ºĞÅÏ¢»¥Ïà´®µÄÏÖÏó
  * 
- * 10ã€å¥½å‹æ•°æ®åº“çš„ç®¡ç†	
- * 		éœ€è¦æ³¨å†Œ
+ * 10¡¢ºÃÓÑÊı¾İ¿âµÄ¹ÜÀí	
+ * 		ĞèÒª×¢²á
  * 
- * 		11ã€ç•Œé¢é—®é¢˜
- * 				ç”¨Swing.treeç­‰ä¼šæ›´å¥½
+ * 		11¡¢½çÃæÎÊÌâ
+ * 				ÓÃSwing.treeµÈ»á¸üºÃ
  * 
- * 12ã€å¤šæƒ³æƒ³connectçš„é—®é¢˜
+ * 12¡¢¶àÏëÏëconnectµÄÎÊÌâ
  */
 
 
 public class Chatroom extends JFrame implements Runnable,ActionListener{
-	//swingé¢æ¿ç»„æˆ
-	private JButton send = new JButton("å‘é€");
-	private JButton delete = new JButton("æ¸…ç©º");
-	private JButton connect = new JButton("è¿æ¥");
+	//swingÃæ°å×é³É
+	private JButton send = new JButton("·¢ËÍ");
+	private JButton delete = new JButton("Çå¿Õ");
+	private JButton connect = new JButton("Á¬½Ó");
 	private JTextArea ince = new JTextArea(2,10);
 	private JTextArea inced = new JTextArea(10,40);
 	private JScrollPane inces = new JScrollPane(ince);
@@ -76,7 +76,7 @@ public class Chatroom extends JFrame implements Runnable,ActionListener{
 	private Boolean state = true;
 	Thread thread;
 	
-	//socketéƒ¨åˆ†
+	//socket²¿·Ö
 	InetAddress group;
 	MulticastSocket socket;
 	int port;
@@ -85,8 +85,8 @@ public class Chatroom extends JFrame implements Runnable,ActionListener{
 	static DatabaseLink link = DatabaseLink.getLink();
 	
 	public Chatroom(Boolean state,int port,int...ports) {
-		//é¢æ¿è®¾è®¡
-		super(link.SelectUsername(port)+"çš„èŠå¤©å®¤");
+		//Ãæ°åÉè¼Æ
+		super(link.SelectUsername(port)+"µÄÁÄÌìÊÒ");
 		this.port = port;
 		this.ports =ports;
 		this.state = state;
@@ -99,7 +99,7 @@ public class Chatroom extends JFrame implements Runnable,ActionListener{
 		inced.setEditable(false);
 		inced.setLineWrap(true);
 		
-		//ç½‘æ ¼è®¾è®¡
+		//Íø¸ñÉè¼Æ
 		JPanel p2 = new JPanel();
 		p2.setLayout(new FlowLayout(FlowLayout.CENTER,10,5));
 		p2.add(send);
@@ -113,30 +113,30 @@ public class Chatroom extends JFrame implements Runnable,ActionListener{
 		
 		
 		
-		//æ·»åŠ ç›‘å¬è¡Œä¸º
+		//Ìí¼Ó¼àÌıĞĞÎª
 		send.addActionListener(this);
 		connect.addActionListener(this);
 		delete.addActionListener(this);
 		
 		setVisible(true);
 	}
-	//è®¾ç½®ç›‘å¬åŠ¨ä½œ
+	//ÉèÖÃ¼àÌı¶¯×÷
 	public void actionPerformed(ActionEvent e) {
 		JButton jb = (JButton)e.getSource();
-		//æ¸…ç©ºçš„æƒ…å†µ
+		//Çå¿ÕµÄÇé¿ö
 		if(jb == delete) {
 			ince.setText("");
 		}
 					
-		//å‘é€çš„æƒ…å†µ
+		//·¢ËÍµÄÇé¿ö
 		if(jb == send) {
 				send(port, ports);					
 						
 		}
 					
-				//è¿æ¥çš„æƒ…å†µ
+				//Á¬½ÓµÄÇé¿ö
 			if(jb == connect) {
-					if(jb.getText().equals("è¿æ¥")) {
+					if(jb.getText().equals("Á¬½Ó")) {
 						thread = new Thread(this);
 						if(!thread.isAlive()) {
 							thread = new Thread(this);
@@ -151,32 +151,32 @@ public class Chatroom extends JFrame implements Runnable,ActionListener{
 						}
 						connect(port);
 						thread.start();
-						jb.setText("æ–­å¼€è¿æ¥");
+						jb.setText("¶Ï¿ªÁ¬½Ó");
 						
 					}
-					else if(jb.getText().equals("æ–­å¼€è¿æ¥")) {
+					else if(jb.getText().equals("¶Ï¿ªÁ¬½Ó")) {
 						getMessage = false;
-						jb.setText("è¿æ¥");
+						jb.setText("Á¬½Ó");
 					}
 			}
-					//è¯»è¡¨æ“ä½œå’Œè®¾ç½®æ“ä½œè¦ç»‘åœ¨ä¸€å—
+					//¶Á±í²Ù×÷ºÍÉèÖÃ²Ù×÷Òª°óÔÚÒ»¿é
 						
 						
 		}
 				
 	public void notConnect() {
-		JDialog jd = new JDialog(this,"é”™è¯¯æç¤º");
+		JDialog jd = new JDialog(this,"´íÎóÌáÊ¾");
 		jd.setSize(30,30);
 		jd.setLocationRelativeTo(null);
-		JLabel jl = new JLabel("æ— æ³•è¿æ¥æŒ‡å®šçš„æœåŠ¡å™¨");
+		JLabel jl = new JLabel("ÎŞ·¨Á¬½ÓÖ¸¶¨µÄ·şÎñÆ÷");
 		jd.add(jl);
 		jd.setVisible(true);
 	}
 	
-	//è¿›ç¨‹ä¸­è·å¾—ä¿¡æ¯
+	//½ø³ÌÖĞ»ñµÃĞÅÏ¢
 	public void run() {
 		 while (true) {
-			 //çº¿ç¨‹ä¸­å¾—åˆ°æ¶ˆæ¯å°±æ”¶packet
+			 //Ïß³ÌÖĞµÃµ½ÏûÏ¢¾ÍÊÕpacket
 			 if(true) {
 				 DatagramPacket packet;
 				 try {
@@ -216,7 +216,7 @@ public class Chatroom extends JFrame implements Runnable,ActionListener{
 		connect(port);
 	}
 	
-//		å¿™ç¢Œéƒ¨åˆ†çš„åº”ç­”è¯­
+//		Ã¦Âµ²¿·ÖµÄÓ¦´ğÓï
 //	public void send(String s, int...ports) {
 //		byte message[] = s.getBytes();
 //		try {
@@ -236,7 +236,7 @@ public class Chatroom extends JFrame implements Runnable,ActionListener{
 //	}
 	
 	
-	//è¿æ¥
+	//Á¬½Ó
 	public void connect(int port) {
 		try {
 			group = InetAddress.getByName("224.1.0.255");

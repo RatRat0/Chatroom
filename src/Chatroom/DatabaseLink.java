@@ -6,7 +6,7 @@ import java.sql.SQLException;
 import java.sql.Connection;
 
 public class DatabaseLink {
-	private String url = "jdbc:mysql://127.0.0.01:3306/account";//è¿æ¥æ•°æ®åº“
+	private String url = "jdbc:mysql://127.0.0.01:3306/account";//Á¬½ÓÊı¾İ¿â
 	private String username = "root";
 	private String userpassword;
 	private String password = "3511811a/";
@@ -33,7 +33,7 @@ public class DatabaseLink {
 	}
 	
 	
-	//å¾—åˆ°ç”¨æˆ·å§“å
+	//µÃµ½ÓÃ»§ĞÕÃû
 	public String SelectUsername(int port) {
 		String sql = "select username from account where port = ?";
 		try {
@@ -149,7 +149,7 @@ public class DatabaseLink {
 		return 0;
 	}
 	public String [] getRecord(String chatRoomNum) {
-		String [] records = new String [getRecordCount(chatRoomNum)];//ï¿½ï¿½Òªï¿½ï¿½Ò»ï¿½ï¿½
+		String [] records = new String [getRecordCount(chatRoomNum)];
 		String sql = "select record from chatrecord where chatroom = ?";
 		try {
 			stat = con.prepareStatement(sql);
@@ -184,7 +184,7 @@ public class DatabaseLink {
 		return 0;
 	}
 	public String [] getSender (String chatRoomNum) {
-		String [] senders = new String [getRecordCount(chatRoomNum)];//ï¿½ï¿½Òªï¿½ï¿½Ò»ï¿½ï¿½
+		String [] senders = new String [getRecordCount(chatRoomNum)];
 		String sql = "select sender from chatrecord where chatroom = ?";
 		try {
 			stat = con.prepareStatement(sql);
@@ -217,7 +217,7 @@ public class DatabaseLink {
 		
 	}
 	public void insertRecord(String record, String chatRoomNum, String sender) {
-		String sql = "insert into chatrecord (record,chatroom,sender,time) values(?,?,?,0)";//Ê±ï¿½ï¿½ï¿½ï¿½Ê±Îª0
+		String sql = "insert into chatrecord (record,chatroom,sender,time) values(?,?,?,0)";
 		try {
 			stat = con.prepareStatement(sql);
 			stat.setString(3, sender);

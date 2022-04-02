@@ -5,18 +5,18 @@ import java.net.SocketAddress;
 public class UserInfo {
 	private String username = "";
 	private String password = "";
-	//è¯¥ç”¨æˆ·çš„Multicastsocket æ‰€åœ¨çš„IPå’Œç«¯å£
+	//¸ÃÓÃ»§µÄMulticastsocket ËùÔÚµÄIPºÍ¶Ë¿Ú
 	private int port;
 	private UserInterface userinterface = new UserInterface(port);
 	
-	//æ„é€ å‡½æ•°
+	//¹¹Ôìº¯Êı
 	public UserInfo(String username , String password , int port) {
 		this.username = username;
 		this.password = password;
 		this.port = port;
 	}
 	
-	//å„æˆå‘˜å‡½æ•°çš„getå’Œpassword(passwordæ— get)
+	//¸÷³ÉÔ±º¯ÊıµÄgetºÍpassword(passwordÎŞget)
 	public void setUsername(String username) {
 		this.username = username;
 	}
